@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpdesk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <h1>Helpdesk</h1>
+            
+            <!-- Login Form -->
+            <div id="login-view">
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-primary">Entrar</button>
+                    <p id="login-message" class="error-message"></p>
+                </form>
+                <p class="switch-form-text">¿No tienes una cuenta? <a href="#" id="show-register-btn">Regístrate aquí</a></p>
+            </div>
+
+            <!-- Registration Form (initially hidden) -->
+            <div id="register-view" style="display: none;">
+                <h2>Crear Cuenta</h2>
+                <form id="register-form">
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <input type="password" id="register-password" placeholder="Contraseña (mín. 6 caracteres)" required>
+                    <button type="submit" class="btn-primary">Crear Cuenta</button>
+                    <p id="register-message" class="error-message"></p>
+                </form>
+                <p class="switch-form-text">¿Ya tienes una cuenta? <a href="#" id="show-login-btn">Inicia Sesión</a></p>
+            </div>
+        </div>
+        <footer>
+            Hecho por Jefferson Rosas
+        </footer>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Firebase Initialization (as a module) -->
+    <script type="module" src="firebase-init.js"></script>
+
+    <!-- Auth Logic (as a standard script, deferred) -->
+    <script src="auth.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Agente - Helpdesk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page"> <!-- Usamos la misma clase para reutilizar estilos -->
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Helpdesk (Agente)</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#">Todos los Tickets</a></li>
+                    <li><a href="#">Tickets Asignados</a></li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Panel de Agente</h1>
+                <button id="logout-btn-agent" class="btn-secondary">Cerrar Sesión</button>
+            </header>
+
+            <section class="tickets-section">
+                 <div id="agent-ticket-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Firebase Initialization (as a module) -->
+    <script type="module" src="firebase-init.js"></script>
+
+    <!-- Agent Dashboard Logic (NOW AS A MODULE) -->
+    <script type="module" src="agent-dashboard.js"></script> 
+
+</body>
+</html>
