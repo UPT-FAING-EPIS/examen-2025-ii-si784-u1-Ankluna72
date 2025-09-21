@@ -1,4 +1,4 @@
-# Sistema de Tickets Helpdesk 헬프데스크
+# Sistema de Tickets Helpdesk - Jefferson Rosas Chambilla
 
 Un sistema web moderno y robusto para la gestión de tickets de soporte, construido desde cero con tecnologías web estándar y potenciado por los servicios en la nube de Firebase.
 
